@@ -1,0 +1,13 @@
+
+
+Tips: why we should +1 when find medium index in a list: 
+len = n
+if n is even, right medium = (n+1)/2  
+if n is odd, medium = (n+1)/2
+
+n/2 is not find the medium, but is find half size of list.  
+if n is even,     (1 2  *  3 4) 
+Here the half size is 2, and 2 is also the index of '2'(start from 1)
+if n is odd,     (1 2   *3   4 5)
+n/2=2.5  The equation hope to divide the middle number by half(0.5 for front and 0.5 for back), but it is impossible in intager. In programming, the 2.5 will take down into 2. This time it can't represent the medium. Thats why we add '1'. 
+In n is even, '1'/2 = 0.5, so before rounding, we add 0.5 to the 2.5, becomes 3. Then 3 represents the medium. Add '1' will not impact the medium when n is even. As n+1 is only added 0.5, when rounding, it will get to lowerbound, and igonre the 0.5.
